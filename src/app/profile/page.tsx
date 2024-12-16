@@ -36,7 +36,7 @@ export default function ProfilePage() {
 
         // setUserProfile(profileData);
         // setRecentArenas(arenasData);
-        
+        console.log("fetched")
       } catch (error) {
         console.error('Error fetching user data:', error);
       }
