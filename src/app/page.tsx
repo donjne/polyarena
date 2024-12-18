@@ -7,7 +7,7 @@ import {
   Sword, Users2, Target, Star, Medal, Calendar, Shield, Zap,
   Award, Clock, ChevronDown, ChevronUp, Gift, Flame
 } from "lucide-react";
-
+import Header from '@/components/Header';
 interface Ability {
   name: string;
   description: string;
@@ -101,7 +101,7 @@ export default function Home() {
     {
       icon: <Users2 className="w-8 h-8 text-purple-600" />,
       title: "Form Your Squad",
-      description: "Join forces with other predictors or brave the arena solo - the choice is yours."
+      description: "Brave the arena solo or Join forces with other predictors - the choice is yours."
     },
     {
       icon: <Target className="w-8 h-8 text-purple-600" />,
@@ -124,7 +124,7 @@ export default function Home() {
     {
       name: "Prophet Mage",
       rarity: "Legendary",
-      price: "2.5 ETH",
+      price: "2.5 SOL",
       stats: { accuracy: 95, power: 88, survival: 92 },
       abilities: [
         {
@@ -147,7 +147,7 @@ export default function Home() {
     {
       name: "Time Warrior",
       rarity: "Epic",
-      price: "1.8 ETH",
+      price: "1.8 SOL",
       stats: { accuracy: 90, power: 94, survival: 85 },
       abilities: [
         {
@@ -170,7 +170,7 @@ export default function Home() {
     {
       name: "Oracle Knight",
       rarity: "Rare",
-      price: "1.2 ETH",
+      price: "1.2 SOL",
       stats: { accuracy: 88, power: 82, survival: 89 },
       abilities: [
         {
@@ -194,18 +194,18 @@ export default function Home() {
 
   const seasonalRankings: SeasonalRankings = {
     current: [
-      { rank: 1, name: "CryptoSage", points: 15000, tier: "Grandmaster", rewards: "50 ETH" },
-      { rank: 2, name: "PredictionKing", points: 14200, tier: "Master", rewards: "30 ETH" },
-      { rank: 3, name: "OracleHunter", points: 13800, tier: "Diamond", rewards: "20 ETH" },
-      { rank: 4, name: "TimeWizard", points: 13200, tier: "Diamond", rewards: "10 ETH" },
-      { rank: 5, name: "FutureSeeker", points: 12900, tier: "Platinum", rewards: "5 ETH" }
+      { rank: 1, name: "CryptoSage", points: 15000, tier: "Grandmaster", rewards: "50 SOL" },
+      { rank: 2, name: "PredictionKing", points: 14200, tier: "Master", rewards: "30 SOL" },
+      { rank: 3, name: "OracleHunter", points: 13800, tier: "Diamond", rewards: "20 SOL" },
+      { rank: 4, name: "TimeWizard", points: 13200, tier: "Diamond", rewards: "10 SOL" },
+      { rank: 5, name: "FutureSeeker", points: 12900, tier: "Platinum", rewards: "5 SOL" }
     ],
     previous: [
-      { rank: 1, name: "MarketOracle", points: 16500, tier: "Grandmaster", rewards: "60 ETH" },
-      { rank: 2, name: "ChainMaster", points: 15800, tier: "Master", rewards: "35 ETH" },
-      { rank: 3, name: "CryptoWizard", points: 15200, tier: "Diamond", rewards: "25 ETH" },
-      { rank: 4, name: "BlockSeeker", points: 14500, tier: "Diamond", rewards: "12 ETH" },
-      { rank: 5, name: "TokenHunter", points: 14100, tier: "Platinum", rewards: "6 ETH" }
+      { rank: 1, name: "MarketOracle", points: 16500, tier: "Grandmaster", rewards: "60 SOL" },
+      { rank: 2, name: "ChainMaster", points: 15800, tier: "Master", rewards: "35 SOL" },
+      { rank: 3, name: "CryptoWizard", points: 15200, tier: "Diamond", rewards: "25 SOL" },
+      { rank: 4, name: "BlockSeeker", points: 14500, tier: "Diamond", rewards: "12 SOL" },
+      { rank: 5, name: "TokenHunter", points: 14100, tier: "Platinum", rewards: "6 SOL" }
     ]
   };
 
@@ -258,7 +258,7 @@ export default function Home() {
     {
       name: "Grand Champion Arena",
       date: "Dec 20, 2024",
-      prizePool: "100 ETH",
+      prizePool: "100 SOL",
       type: "Solo Battle Royale",
       status: "Registration Open",
       players: "128/128"
@@ -266,7 +266,7 @@ export default function Home() {
     {
       name: "Squad Warfare",
       date: "Dec 22, 2024",
-      prizePool: "75 ETH",
+      prizePool: "75 SOL",
       type: "Team Tournament",
       status: "Registration Open",
       players: "45/64"
@@ -274,7 +274,7 @@ export default function Home() {
     {
       name: "Lightning Round Challenge",
       date: "Dec 23, 2024",
-      prizePool: "50 ETH",
+      prizePool: "50 SOL",
       type: "Speed Prediction",
       status: "Coming Soon",
       players: "0/32"
@@ -282,7 +282,7 @@ export default function Home() {
     {
       name: "Survival Series Finals",
       date: "Dec 25, 2024",
-      prizePool: "200 ETH",
+      prizePool: "100 SOL",
       type: "Elimination Battle",
       status: "Invitation Only",
       players: "16/16"
@@ -290,6 +290,8 @@ export default function Home() {
   ];
 
   return (
+    <>
+    <Header />
     <main className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative">
@@ -364,7 +366,7 @@ export default function Home() {
                   className="inline-block px-8 py-3 rounded-lg border-2 border-purple-600 text-purple-600 
                            font-medium hover:bg-purple-50 transform transition-all duration-200"
                 >
-                  Join Arena
+                  Enter Arena
                 </Link>
               </motion.div>
             </motion.div>
@@ -807,5 +809,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }

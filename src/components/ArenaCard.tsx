@@ -1,7 +1,7 @@
 // components/ArenaCard.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Timer, Users, Trophy, Wallet, Star, Share2 } from 'lucide-react';
+import { Timer, Star, Share2 } from 'lucide-react';
 import type { Arena } from '../types/arena';
 
 interface ArenaCardProps {
